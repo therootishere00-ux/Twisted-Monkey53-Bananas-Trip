@@ -42,4 +42,5 @@ html, body {
 
 img {
   pointer-events: none;
-  -webkit-user-
+  -webkit-user-drag: none;
+}
