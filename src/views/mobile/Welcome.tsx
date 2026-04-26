@@ -5,10 +5,10 @@ import QuickRequestCard from "./QuickRequestCard";
 
 export default function Welcome() {
   return (
-    <div className="relative flex flex-col h-screen w-full px-6 pt-12 animate-in fade-in duration-500">
+    <div className="relative flex flex-col h-screen w-full pt-6">
       
-      <div className="absolute top-6 left-6 z-20">
-        <button className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center active:scale-90 transition-transform">
+      <div className="w-full px-6 flex justify-start shrink-0 z-10">
+        <button className="glass-base w-10 h-10 rounded-full flex items-center justify-center active:scale-90 transition-transform">
           <img 
             src="/icons/menu.PNG" 
             alt="Menu" 
@@ -17,29 +17,29 @@ export default function Welcome() {
         </button>
       </div>
 
-      <div className="flex items-center gap-4 mt-16 mb-10 z-10 relative">
-        <div className="w-[140px] h-[140px] shrink-0 gif-mask -ml-2">
+      <div className="w-full px-6 mt-8 shrink-0 flex items-start gap-4">
+        <div className="w-[140px] h-[140px] shrink-0 gif-mask -ml-3">
           <img 
             src="/gifs/assistant.GIF" 
             alt="Assistant" 
             className="w-full h-full object-contain"
           />
         </div>
-        
-        <div className="flex-1 pt-2">
-          <h1 className="text-[22px] font-bold text-white leading-tight mb-2 tracking-tight">
+
+        <div className="flex-1 pt-3">
+          <h1 className="text-[20px] font-bold text-white leading-tight mb-2 tracking-tight">
             Привет, командир!
           </h1>
-          <h2 className="text-[14px] font-medium text-white/50 leading-snug">
+          <p className="text-[14px] text-white/50 leading-snug font-medium">
             Я — твой ИИ-ассистент по SWGOH. Чем могу помочь?
-          </h2>
+          </p>
         </div>
       </div>
 
-      <div className="w-full z-10 relative">
-        <h3 className="text-[14px] font-normal text-white/40 mb-4 pl-1">
+      <div className="w-full px-6 mt-6 shrink-0">
+        <h2 className="text-[14px] font-normal text-white/50 mb-4 text-left pl-1">
           Что спросить?
-        </h3>
+        </h2>
         <div className="grid grid-cols-2 gap-3">
           <QuickRequestCard 
             title="Команды для ГВ" 
