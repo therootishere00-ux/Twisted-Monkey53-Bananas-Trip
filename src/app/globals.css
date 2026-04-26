@@ -16,15 +16,15 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #050A18; /* Глубокий синий */
+  background-color: #050A18;
   color: #FFFFFF;
+}
+
+.gif-mask {
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
 
 ::-webkit-scrollbar {
   display: none;
-}
-
-* {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
