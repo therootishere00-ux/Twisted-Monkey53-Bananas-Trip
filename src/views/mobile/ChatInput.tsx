@@ -6,31 +6,24 @@ export default function ChatInput() {
   const [value, setValue] = useState("");
 
   return (
-    <div className="w-full max-w-[400px] px-6">
-      <div className="relative flex items-center">
-        <input
-          type="text"
+    <div className="fixed bottom-10 left-0 w-full px-6 z-50">
+      <div className="glass w-full rounded-[24px] min-h-[110px] p-4 flex flex-col justify-between">
+        <textarea
           value={value}
           onChange={(e) => setValue(e.target.value)}
           placeholder="Спросить что-нибудь…"
-          className="w-full bg-[#1C1C1E] border border-transparent rounded-[24px] py-[12px] pl-5 pr-12 text-[16px] text-white leading-tight outline-none placeholder:text-[#636366]"
+          className="bg-transparent border-none text-white text-[16px] placeholder:text-white/30 resize-none h-[60px] w-full leading-snug"
         />
-        <button
-          disabled={!value}
-          className={`absolute right-1.5 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
-            value ? "bg-[#F2F2F7]" : "bg-[#2C2C2E]"
-          }`}
-        >
-          <img 
-            src="/icons/send.PNG" 
-            alt="Send" 
-            className={`w-3.5 h-3.5 object-contain ${value ? "invert-0" : "invert"}`} 
-          />
-        </button>
+        <div className="flex justify-end w-full">
+          <button className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center active:scale-95 transition-transform">
+            <img 
+              src="/icons/send.PNG" 
+              alt="Send" 
+              className="w-5 h-5 object-contain invert" 
+            />
+          </button>
+        </div>
       </div>
-      <p className="mt-4 text-center text-[11px] font-medium text-[#636366] leading-snug">
-        Это ИИ. Иногда он может давать неверную информацию
-      </p>
     </div>
   );
 }
