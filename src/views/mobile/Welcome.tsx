@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 import ChatInput from "./ChatInput";
 
 const greetings = [
-  "Привет, юзер!",
-  "Да пребудет с тобой сила, юзер!",
+  "Привет, командир!",
+  "Да пребудет сила!",
   "Сап, юзер!",
-  "Что на душе, юзер?"
+  "Что на душе?"
 ];
 
 export default function Welcome() {
@@ -18,10 +18,10 @@ export default function Welcome() {
   }, []);
 
   return (
-    <div className="relative flex flex-col items-center justify-center min-h-screen w-full bg-black animate-in fade-in duration-700">
+    <div className="relative flex flex-col min-h-screen w-full bg-black animate-in fade-in duration-1000">
       
       <div className="absolute top-6 left-6">
-        <button className="w-10 h-10 rounded-full bg-[#1C1C1E] flex items-center justify-center active:scale-95 transition-transform">
+        <button className="w-10 h-10 rounded-full bg-[#1C1C1E] flex items-center justify-center active:scale-90 transition-transform">
           <img 
             src="/icons/menu.PNG" 
             alt="Menu" 
@@ -30,20 +30,25 @@ export default function Welcome() {
         </button>
       </div>
 
-      <div className="w-full max-w-[400px] px-6 mb-10">
-        <div className="flex items-center gap-3 mb-1">
-          <img 
-            src="/icons/applogo.PNG" 
-            alt="Logo" 
-            className="w-[32px] h-[32px] object-contain shrink-0" 
-          />
-          <h1 className="text-[28px] font-bold text-[#F2F2F7] tracking-tight leading-tight whitespace-nowrap">
-            {greeting}
-          </h1>
+      <div className="flex-1 flex flex-col items-center justify-center px-6 pb-20">
+        <div className="flex items-center gap-5 w-full max-w-[400px]">
+          <div className="w-[85px] h-[85px] shrink-0">
+            <img 
+              src="/gifs/assistant.GIF" 
+              alt="Assistant" 
+              className="w-full h-full object-contain"
+            />
+          </div>
+          
+          <div className="flex flex-col">
+            <h1 className="text-[24px] font-bold text-[#F2F2F7] tracking-tight leading-tight">
+              {greeting}
+            </h1>
+            <h2 className="text-[24px] font-bold text-[#636366] tracking-tight leading-tight">
+              Помогу с любым вопросом в SWGoH
+            </h2>
+          </div>
         </div>
-        <h2 className="text-[28px] font-bold text-[#636366] tracking-tight leading-tight">
-          Я помогу тебе с любым вопросом в SWGoH
-        </h2>
       </div>
 
       <ChatInput />
