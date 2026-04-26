@@ -41,22 +41,10 @@ export default function Welcome() {
           Что спросить?
         </h2>
         <div className="grid grid-cols-2 gap-3">
-          <QuickRequestCard 
-            title="Команды для ГВ" 
-            iconName="card1.PNG" 
-          />
-          <QuickRequestCard 
-            title="Лучшая арена защиты" 
-            iconName="card2.PNG" 
-          />
-          <QuickRequestCard 
-            title="Фарм персонажей" 
-            iconName="card3.PNG" 
-          />
-          <QuickRequestCard 
-            title="Советы по рейдам" 
-            iconName="card4.PNG" 
-          />
+          <QuickRequestCard title="Команды для ГВ" iconName="card1.PNG" />
+          <QuickRequestCard title="Лучшая арена защиты" iconName="card2.PNG" />
+          <QuickRequestCard title="Фарм персонажей" iconName="card3.PNG" />
+          <QuickRequestCard title="Советы по рейдам" iconName="card4.PNG" />
         </div>
       </div>
 
