@@ -5,10 +5,10 @@ import QuickRequestCard from "./QuickRequestCard";
 
 export default function Welcome() {
   return (
-    <div className="relative flex flex-col h-screen w-full pt-6">
+    <div className="relative flex flex-col h-screen w-full bg-black pt-6">
       
       <div className="w-full px-6 flex justify-start shrink-0 z-10">
-        <button className="glass-base w-10 h-10 rounded-full flex items-center justify-center active:scale-90 transition-transform">
+        <button className="bg-[#1C1C1E] w-10 h-10 rounded-full flex items-center justify-center active:scale-90 transition-transform">
           <img 
             src="/icons/menu.PNG" 
             alt="Menu" 
@@ -17,8 +17,8 @@ export default function Welcome() {
         </button>
       </div>
 
-      <div className="w-full px-6 mt-8 shrink-0 flex items-start gap-4">
-        <div className="w-[140px] h-[140px] shrink-0 gif-mask -ml-3">
+      <div className="w-full px-6 mt-6 shrink-0 flex items-start gap-4">
+        <div className="w-[130px] h-[130px] shrink-0 gif-mask -ml-2">
           <img 
             src="/gifs/assistant.GIF" 
             alt="Assistant" 
@@ -26,18 +26,18 @@ export default function Welcome() {
           />
         </div>
 
-        <div className="flex-1 pt-3">
-          <h1 className="text-[20px] font-bold text-white leading-tight mb-2 tracking-tight">
+        <div className="flex-1 pt-4">
+          <h1 className="text-[22px] font-bold text-[#F2F2F7] leading-tight mb-1.5 tracking-tight">
             Привет, командир!
           </h1>
-          <p className="text-[14px] text-white/50 leading-snug font-medium">
-            Я — твой ИИ-ассистент по SWGOH. Чем могу помочь?
+          <p className="text-[15px] text-[#636366] leading-snug font-medium">
+            Я твой ИИ-ассистент по SWGOH. Чем могу помочь?
           </p>
         </div>
       </div>
 
-      <div className="w-full px-6 mt-6 shrink-0">
-        <h2 className="text-[14px] font-normal text-white/50 mb-4 text-left pl-1">
+      <div className="w-full px-6 mt-8 shrink-0">
+        <h2 className="text-[14px] font-normal text-[#636366] mb-4 text-left pl-1">
           Что спросить?
         </h2>
         <div className="grid grid-cols-2 gap-3">
