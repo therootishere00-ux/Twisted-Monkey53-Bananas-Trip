@@ -11,8 +11,8 @@ const tintClasses = {
 
 export default function QuickRequestCard({ title, tint }: QuickRequestCardProps) {
   return (
-    <button className={`p-5 rounded-2xl flex items-center justify-start min-h-[70px] transition-all active:scale-[0.98] ${tintClasses[tint]}`}>
-      <span className="text-[14px] font-medium text-white/70 text-left leading-tight">
+    <button className={`p-5 rounded-2xl flex items-center justify-start min-h-[72px] transition-all active:scale-[0.98] ${tintClasses[tint]}`}>
+      <span className="text-[14px] font-medium text-white/60 text-left leading-tight">
         {title}
       </span>
     </button>
