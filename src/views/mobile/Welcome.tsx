@@ -4,20 +4,20 @@ import QuickRequestCard from "./QuickRequestCard";
 
 export default function Welcome() {
   return (
-    <div className="relative flex flex-col min-h-screen w-full px-6 pt-12 pb-10 animate-in fade-in duration-700">
+    <div className="relative flex flex-col min-h-screen w-full px-6 pt-12 pb-10 animate-in fade-in duration-500">
       
       <div className="absolute top-6 left-6">
-        <button className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center active:scale-90 transition-all">
+        <button className="p-0 border-none bg-transparent active:opacity-50 transition-opacity">
           <img 
             src="/icons/menu.PNG" 
             alt="Menu" 
-            className="w-4 h-4 object-contain invert" 
+            className="w-6 h-6 object-contain invert" 
           />
         </button>
       </div>
 
-      <div className="flex items-center gap-4 mb-12 mt-14">
-        <div className="w-[140px] h-[140px] shrink-0 gif-mask">
+      <div className="flex items-start gap-4 mb-14 mt-16">
+        <div className="w-[150px] h-[150px] shrink-0 gif-mask -ml-2">
           <img 
             src="/gifs/assistant.GIF" 
             alt="Assistant" 
@@ -25,8 +25,8 @@ export default function Welcome() {
           />
         </div>
 
-        <div className="flex-1">
-          <h1 className="text-[20px] font-bold text-white leading-tight mb-1 tracking-tight">
+        <div className="flex-1 pt-2">
+          <h1 className="text-[20px] font-bold text-white leading-tight mb-2 tracking-tight">
             Привет, командир!
           </h1>
           <p className="text-[14px] text-white/50 leading-snug font-medium">
@@ -36,7 +36,7 @@ export default function Welcome() {
       </div>
 
       <div className="w-full">
-        <h2 className="text-[15px] font-medium text-white/50 mb-5 text-left">
+        <h2 className="text-[15px] font-medium text-white/50 mb-5 text-left pl-1">
           Быстрые запросы
         </h2>
         <div className="grid grid-cols-2 gap-3">
