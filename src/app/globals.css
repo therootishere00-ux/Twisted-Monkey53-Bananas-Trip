@@ -16,30 +16,21 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  /* Градиент как на фото: от светлого синего к глубокому */
-  background: radial-gradient(circle at top, #141F3D 0%, #050A18 100%);
+  background: radial-gradient(circle at top right, #111D3A 0%, #050A18 60%);
   color: #FFFFFF;
 }
 
-/* Эффект стеклянного контура с свечением (как на референсе) */
-.card-glass-glow {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  /* Белая полупрозрачная обводка */
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  /* Мягкое свечение контура */
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.03);
+.gif-mask {
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
 
-/* Уникальные свечения для каждого цвета */
-.tint-blue { border-color: rgba(59, 130, 246, 0.2); box-shadow: 0 0 15px rgba(59, 130, 246, 0.05); }
-.tint-green { border-color: rgba(34, 197, 94, 0.2); box-shadow: 0 0 15px rgba(34, 197, 94, 0.05); }
-.tint-purple { border-color: rgba(168, 85, 247, 0.2); box-shadow: 0 0 15px rgba(168, 85, 247, 0.05); }
-
-.gif-mask {
-  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 ::-webkit-scrollbar {
