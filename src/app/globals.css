@@ -16,9 +16,8 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  /* Градиент в духе глубокого космоса */
-  background: radial-gradient(circle at center, #0B1020 0%, #03040A 100%);
-  color: white;
+  background-color: #000000;
+  color: #FFFFFF;
 }
 
 ::-webkit-scrollbar {
@@ -30,16 +29,15 @@ body {
   scrollbar-width: none;
 }
 
-/* Стили для свечения карточек */
 .card-glow-blue {
-  box-shadow: 0 0 15px rgba(59, 130, 246, 0.15);
-  border-color: rgba(59, 130, 246, 0.3);
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.2);
+  border: 1px solid rgba(59, 130, 246, 0.4);
 }
 .card-glow-green {
-  box-shadow: 0 0 15px rgba(34, 197, 94, 0.15);
-  border-color: rgba(34, 197, 94, 0.3);
+  box-shadow: 0 4px 20px rgba(34, 197, 94, 0.2);
+  border: 1px solid rgba(34, 197, 94, 0.4);
 }
 .card-glow-purple {
-  box-shadow: 0 0 15px rgba(168, 85, 247, 0.15);
-  border-color: rgba(168, 85, 247, 0.3);
+  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.2);
+  border: 1px solid rgba(168, 85, 247, 0.4);
 }
