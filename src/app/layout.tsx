@@ -7,6 +7,10 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "SWGOH AI",
   description: "AI Assistant for SWGOH",
+  icons: {
+    icon: "/images/appicon.PNG",
+    apple: "/images/appicon.PNG",
+  },
 };
 
 export const viewport: Viewport = {
