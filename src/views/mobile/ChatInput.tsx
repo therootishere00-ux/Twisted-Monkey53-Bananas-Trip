@@ -6,31 +6,24 @@ export default function ChatInput() {
   const [value, setValue] = useState("");
 
   return (
-    <div className="fixed bottom-8 left-0 w-full px-6 flex flex-col items-center">
-      <div className="relative flex items-center w-full max-w-[400px]">
-        <input
-          type="text"
+    <div className="fixed bottom-8 left-0 w-full px-6 z-50">
+      <div className="glass-input w-full rounded-[24px] min-h-[110px] p-4 flex flex-col justify-between">
+        <textarea
           value={value}
           onChange={(e) => setValue(e.target.value)}
           placeholder="Спросить что-нибудь…"
-          className="w-full bg-[#1C1C1E] border border-transparent rounded-[28px] py-[16px] pl-6 pr-14 text-[17px] text-white leading-tight outline-none placeholder:text-[#636366] transition-all focus:bg-[#252529]"
+          className="bg-transparent border-none text-[16px] text-white placeholder:text-white/30 resize-none h-[60px] w-full leading-snug"
         />
-        <button
-          disabled={!value}
-          className={`absolute right-2 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
-            value ? "bg-[#F2F2F7]" : "bg-[#2C2C2E]"
-          }`}
-        >
-          <img 
-            src="/icons/send.PNG" 
-            alt="Send" 
-            className={`w-4 h-4 object-contain ${value ? "invert-0" : "invert"}`} 
-          />
-        </button>
+        <div className="flex justify-end w-full">
+          <button className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center active:scale-95 transition-transform">
+            <img 
+              src="/icons/send.PNG" 
+              alt="Send" 
+              className="w-4 h-4 object-contain invert" 
+            />
+          </button>
+        </div>
       </div>
-      <p className="mt-4 text-[11px] font-medium text-[#636366] tracking-wide">
-        Это ИИ. Иногда он может давать неверную информацию
-      </p>
     </div>
   );
 }
