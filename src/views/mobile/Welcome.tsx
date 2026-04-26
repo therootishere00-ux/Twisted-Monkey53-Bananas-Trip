@@ -5,22 +5,21 @@ import QuickRequestCard from "./QuickRequestCard";
 
 export default function Welcome() {
   return (
-    <div className="relative flex flex-col h-screen w-full bg-black pt-6 overflow-hidden">
+    <div className="relative flex flex-col h-screen w-full bg-black pt-6 overflow-hidden animate-in fade-in duration-1000">
+      <div className="light-rays" />
       
-      {/* Menu Button */}
       <div className="w-full px-6 flex justify-start shrink-0 z-10">
-        <button className="bg-[#1C1C1E] w-10 h-10 rounded-full flex items-center justify-center active:scale-90 transition-transform">
+        <button className="bg-[#1C1C1E] w-8 h-8 rounded-full flex items-center justify-center active:scale-90 transition-transform">
           <img 
             src="/icons/menu.PNG" 
             alt="Menu" 
-            className="w-5 h-5 object-contain invert" 
+            className="w-4 h-4 object-contain invert" 
           />
         </button>
       </div>
 
-      {/* Hero Section */}
-      <div className="w-full px-6 mt-6 shrink-0 flex items-start gap-4">
-        <div className="w-[120px] h-[120px] shrink-0 gif-mask -ml-1">
+      <div className="w-full px-6 mt-8 shrink-0 flex items-start gap-5 z-10">
+        <div className="w-[150px] h-[150px] shrink-0 gif-mask -ml-2">
           <img 
             src="/gifs/assistant.GIF" 
             alt="Assistant" 
@@ -28,7 +27,7 @@ export default function Welcome() {
           />
         </div>
 
-        <div className="flex-1 pt-4">
+        <div className="flex-1 pt-6">
           <h1 className="text-[22px] font-bold text-[#F2F2F7] leading-tight mb-1.5 tracking-tight">
             Привет, командир!
           </h1>
@@ -38,8 +37,7 @@ export default function Welcome() {
         </div>
       </div>
 
-      {/* Suggested Questions */}
-      <div className="w-full px-6 mt-10 shrink-0">
+      <div className="w-full px-6 mt-10 shrink-0 z-10">
         <p className="text-[14px] font-normal text-[#636366] mb-4 text-left pl-1">
           Что спросить?
         </p>
