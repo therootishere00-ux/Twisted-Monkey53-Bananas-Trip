@@ -16,8 +16,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  /* Темно-синий из референса */
-  background-color: #050A18;
+  background-color: #050A18; /* Глубокий синий */
   color: #FFFFFF;
 }
 
