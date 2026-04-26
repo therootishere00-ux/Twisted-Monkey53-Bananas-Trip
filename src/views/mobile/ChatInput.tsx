@@ -1,38 +1,66 @@
 "use client";
 
-import { useState } from "react";
+import { FormEvent } from "react";
 
-export default function ChatInput() {
-  const [value, setValue] = useState("");
+interface ChatInputProps {
+  value: string;
+  onChange: (value: string) => void;
+  onSend: () => void;
+  disabled?: boolean;
+}
+
+export default function ChatInput({
+  value,
+  onChange,
+  onSend,
+  disabled = false,
+}: ChatInputProps) {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    onSend();
+  };
 
   return (
-    <div className="fixed bottom-8 left-0 w-full px-6 flex flex-col items-center z-50">
-      <div className="w-full max-w-[400px]">
-        <div className="relative flex items-center">
+    <form className="relative z-10 px-6 pb-6" onSubmit={handleSubmit}>
+      <div className="welcome-composer">
+        <div className="flex items-center gap-3 px-4 py-3">
+          <div className="welcome-composer-chip">
+            <span className="welcome-composer-chip-dot" />
+            Пока без бэкенда
+          </div>
+        </div>
+
+        <div className="relative flex items-end gap-3 px-4 pb-4">
           <input
             type="text"
             value={value}
-            onChange={(e) => setValue(e.target.value)}
-            placeholder="Спросить что-нибудь…"
-            className="w-full bg-[#1C1C1E] border border-transparent rounded-[26px] py-[16px] pl-6 pr-14 text-[17px] text-white leading-tight outline-none placeholder:text-[#636366]"
+            onChange={(event) => onChange(event.target.value)}
+            placeholder="Спросить что-нибудь..."
+            className="welcome-input"
+            disabled={disabled}
           />
           <button
-            disabled={!value}
-            className={`absolute right-2 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
-              value ? "bg-[#F2F2F7]" : "bg-[#2C2C2E]"
+            type="submit"
+            disabled={disabled || !value.trim()}
+            aria-label="Send message"
+            className={`welcome-send-button ${
+              value.trim() && !disabled ? "welcome-send-button-active" : ""
             }`}
           >
-            <img 
-              src="/icons/send.PNG" 
-              alt="Send" 
-              className={`w-3.5 h-3.5 object-contain ${value ? "invert-0" : "invert"}`} 
+            <img
+              src="/icons/send.PNG"
+              alt=""
+              className={`h-3.5 w-3.5 object-contain ${
+                value.trim() && !disabled ? "" : "invert"
+              }`}
             />
           </button>
         </div>
-        <p className="mt-4 text-center text-[11px] font-medium text-[#636366] leading-snug">
-          Это ИИ. Иногда он может давать неверную информацию
-        </p>
       </div>
-    </div>
+
+      <p className="mt-3 text-center text-[11px] leading-snug text-[#8E8E93]">
+        Первое сообщение запускает демо-ответ прямо в интерфейсе.
+      </p>
+    </form>
   );
 }
