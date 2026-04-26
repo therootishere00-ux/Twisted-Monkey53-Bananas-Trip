@@ -4,7 +4,7 @@
 
 * {
   -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
+  touch-action: none;
   user-select: none;
   -webkit-user-select: none;
 }
@@ -21,8 +21,8 @@ body {
 }
 
 .gif-mask {
-  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
 }
 
 .glass-card {
