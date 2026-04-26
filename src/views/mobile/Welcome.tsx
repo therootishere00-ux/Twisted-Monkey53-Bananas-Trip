@@ -5,8 +5,9 @@ import QuickRequestCard from "./QuickRequestCard";
 
 export default function Welcome() {
   return (
-    <div className="relative flex flex-col h-screen w-full bg-black pt-6">
+    <div className="relative flex flex-col h-screen w-full bg-black pt-6 overflow-hidden">
       
+      {/* Menu Button */}
       <div className="w-full px-6 flex justify-start shrink-0 z-10">
         <button className="bg-[#1C1C1E] w-10 h-10 rounded-full flex items-center justify-center active:scale-90 transition-transform">
           <img 
@@ -17,8 +18,9 @@ export default function Welcome() {
         </button>
       </div>
 
+      {/* Hero Section */}
       <div className="w-full px-6 mt-6 shrink-0 flex items-start gap-4">
-        <div className="w-[130px] h-[130px] shrink-0 gif-mask -ml-2">
+        <div className="w-[120px] h-[120px] shrink-0 gif-mask -ml-1">
           <img 
             src="/gifs/assistant.GIF" 
             alt="Assistant" 
@@ -30,16 +32,17 @@ export default function Welcome() {
           <h1 className="text-[22px] font-bold text-[#F2F2F7] leading-tight mb-1.5 tracking-tight">
             Привет, командир!
           </h1>
-          <p className="text-[15px] text-[#636366] leading-snug font-medium">
-            Я твой ИИ-ассистент по SWGOH. Чем могу помочь?
-          </p>
+          <h2 className="text-[18px] font-bold text-[#636366] leading-snug tracking-tight">
+            Помогу с любым вопросом в SWGoH
+          </h2>
         </div>
       </div>
 
-      <div className="w-full px-6 mt-8 shrink-0">
-        <h2 className="text-[14px] font-normal text-[#636366] mb-4 text-left pl-1">
+      {/* Suggested Questions */}
+      <div className="w-full px-6 mt-10 shrink-0">
+        <p className="text-[14px] font-normal text-[#636366] mb-4 text-left pl-1">
           Что спросить?
-        </h2>
+        </p>
         <div className="grid grid-cols-2 gap-3">
           <QuickRequestCard title="Команды для ГВ" iconName="card1.PNG" />
           <QuickRequestCard title="Лучшая арена защиты" iconName="card2.PNG" />
