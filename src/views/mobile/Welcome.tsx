@@ -1,27 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import ChatInput from "./ChatInput";
-
-const greetings = [
-  "Привет, командир!",
-  "Да пребудет сила!",
-  "Сап, юзер!",
-  "Что на душе?"
-];
+import QuickRequestCard from "./QuickRequestCard";
 
 export default function Welcome() {
-  const [greeting, setGreeting] = useState("");
-
-  useEffect(() => {
-    setGreeting(greetings[Math.floor(Math.random() * greetings.length)]);
-  }, []);
-
   return (
-    <div className="relative flex flex-col min-h-screen w-full bg-black animate-in fade-in duration-1000">
+    <div className="relative flex flex-col h-screen w-full px-6 pt-12 animate-in fade-in duration-500">
       
-      <div className="absolute top-6 left-6">
-        <button className="w-10 h-10 rounded-full bg-[#1C1C1E] flex items-center justify-center active:scale-90 transition-transform">
+      <div className="absolute top-6 left-6 z-20">
+        <button className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center active:scale-90 transition-transform">
           <img 
             src="/icons/menu.PNG" 
             alt="Menu" 
@@ -30,24 +17,46 @@ export default function Welcome() {
         </button>
       </div>
 
-      <div className="flex-1 flex flex-col items-center justify-center px-6 pb-20">
-        <div className="flex items-center gap-5 w-full max-w-[400px]">
-          <div className="w-[85px] h-[85px] shrink-0">
-            <img 
-              src="/gifs/assistant.GIF" 
-              alt="Assistant" 
-              className="w-full h-full object-contain"
-            />
-          </div>
-          
-          <div className="flex flex-col">
-            <h1 className="text-[24px] font-bold text-[#F2F2F7] tracking-tight leading-tight">
-              {greeting}
-            </h1>
-            <h2 className="text-[24px] font-bold text-[#636366] tracking-tight leading-tight">
-              Помогу с любым вопросом в SWGoH
-            </h2>
-          </div>
+      <div className="flex items-center gap-4 mt-16 mb-10 z-10 relative">
+        <div className="w-[140px] h-[140px] shrink-0 gif-mask -ml-2">
+          <img 
+            src="/gifs/assistant.GIF" 
+            alt="Assistant" 
+            className="w-full h-full object-contain"
+          />
+        </div>
+        
+        <div className="flex-1 pt-2">
+          <h1 className="text-[22px] font-bold text-white leading-tight mb-2 tracking-tight">
+            Привет, командир!
+          </h1>
+          <h2 className="text-[14px] font-medium text-white/50 leading-snug">
+            Я — твой ИИ-ассистент по SWGOH. Чем могу помочь?
+          </h2>
+        </div>
+      </div>
+
+      <div className="w-full z-10 relative">
+        <h3 className="text-[14px] font-normal text-white/40 mb-4 pl-1">
+          Что спросить?
+        </h3>
+        <div className="grid grid-cols-2 gap-3">
+          <QuickRequestCard 
+            title="Команды для ГВ" 
+            iconName="card1.PNG" 
+          />
+          <QuickRequestCard 
+            title="Лучшая арена защиты" 
+            iconName="card2.PNG" 
+          />
+          <QuickRequestCard 
+            title="Фарм персонажей" 
+            iconName="card3.PNG" 
+          />
+          <QuickRequestCard 
+            title="Советы по рейдам" 
+            iconName="card4.PNG" 
+          />
         </div>
       </div>
 
