@@ -12,13 +12,13 @@ const glowClasses = {
 
 export default function QuickRequestCard({ title, icon, glowColor }: QuickRequestCardProps) {
   return (
-    <button className={`bg-[#0F1425] border p-5 rounded-2xl flex items-center justify-between transition-all active:scale-95 ${glowClasses[glowColor]}`}>
-      <span className="text-sm font-medium text-white/90 text-left leading-snug max-w-[60%]">
-        {title}
-      </span>
-      <div className="shrink-0 scale-110">
+    <button className={`bg-[#121214] p-5 rounded-[20px] flex flex-col justify-between aspect-square transition-all active:scale-95 ${glowClasses[glowColor]}`}>
+      <div className="w-full flex justify-end mb-2">
         {icon}
       </div>
+      <span className="text-[15px] font-bold text-white text-left leading-tight">
+        {title}
+      </span>
     </button>
   );
 }
