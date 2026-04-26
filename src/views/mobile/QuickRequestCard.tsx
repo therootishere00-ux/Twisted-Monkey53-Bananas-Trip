@@ -1,20 +1,21 @@
 interface QuickRequestCardProps {
   title: string;
-  tint: "blue" | "green" | "purple";
+  iconName: string;
 }
 
-const tintClasses = {
-  blue: "bg-[#0C162D]",
-  green: "bg-[#0C2220]",
-  purple: "bg-[#181028]",
-};
-
-export default function QuickRequestCard({ title, tint }: QuickRequestCardProps) {
+export default function QuickRequestCard({ title, iconName }: QuickRequestCardProps) {
   return (
-    <button className={`p-5 rounded-2xl flex items-center justify-start min-h-[72px] transition-all active:scale-[0.98] ${tintClasses[tint]}`}>
-      <span className="text-[14px] font-medium text-white/60 text-left leading-tight">
+    <button className="bg-[#0C162D] p-4 rounded-2xl flex items-center justify-between min-h-[72px] transition-all active:scale-[0.98] w-full">
+      <span className="text-[14px] font-medium text-white/70 text-left leading-tight pr-2">
         {title}
       </span>
+      <div className="w-8 h-8 shrink-0 flex items-center justify-center">
+        <img 
+          src={`/icons/${iconName}`} 
+          alt="" 
+          className="w-full h-full object-contain" 
+        />
+      </div>
     </button>
   );
 }
