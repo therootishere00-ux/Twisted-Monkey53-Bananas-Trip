@@ -18,32 +18,30 @@ export default function Welcome() {
   }, []);
 
   return (
-    <div className="relative flex flex-col items-center justify-center min-h-screen w-full bg-white animate-in fade-in duration-700">
+    <div className="relative flex flex-col items-center justify-center min-h-screen w-full bg-black animate-in fade-in duration-700">
       
-      {/* Menu Button */}
       <div className="absolute top-6 left-6">
-        <button className="w-10 h-10 rounded-full bg-[#F2F4F7] flex items-center justify-center active:scale-95 transition-transform">
+        <button className="w-10 h-10 rounded-full bg-[#1C1C1E] flex items-center justify-center active:scale-95 transition-transform">
           <img 
             src="/icons/menu.PNG" 
             alt="Menu" 
-            className="w-5 h-5 object-contain" 
+            className="w-5 h-5 object-contain invert" 
           />
         </button>
       </div>
 
-      {/* Hero Section */}
-      <div className="w-full max-w-[400px] px-6 mb-8">
+      <div className="w-full max-w-[400px] px-6 mb-10">
         <div className="flex items-center gap-3 mb-1">
           <img 
             src="/icons/applogo.PNG" 
             alt="Logo" 
-            className="w-[40px] h-[40px] object-contain shrink-0" 
+            className="w-[32px] h-[32px] object-contain shrink-0" 
           />
-          <h1 className="text-[36px] font-bold text-[#1A1A1A] tracking-tighter leading-[0.9] whitespace-nowrap">
+          <h1 className="text-[28px] font-bold text-[#F2F2F7] tracking-tight leading-tight whitespace-nowrap">
             {greeting}
           </h1>
         </div>
-        <h2 className="text-[36px] font-bold text-[#636E82] tracking-tighter leading-[1.0] w-full">
+        <h2 className="text-[28px] font-bold text-[#636366] tracking-tight leading-tight">
           Я помогу тебе с любым вопросом в SWGoH
         </h2>
       </div>
